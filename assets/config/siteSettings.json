@@ -172,19 +172,19 @@
       },
       "availableLang": [
         {
-          "lang": "en",
-          "name": "English"
-        },
-        {
           "lang": "sq",
           "name": "Shqip"
         },
         {
           "lang": "sr",
           "name": "Srpski"
+        },
+        {
+          "lang": "en",
+          "name": "English"
         }
       ],
-      "siteLanguage": 1,
+      "siteLanguage": 0,
       "fallbackLang": 0,
       "needsTranslation": [
         "body"

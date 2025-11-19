@@ -130,13 +130,13 @@ multilang:
     i18JQuery: "https://cdn.jsdelivr.net/npm/jquery-i18next@1.2.1/jquery-i18next.min.js"
     i18Sprintf: "https://cdn.jsdelivr.net/npm/i18next-sprintf-postprocessor@0.2.2/dist/umd/i18nextSprintfPostProcessor.min.js"
   availableLang: 
-    - lang: "en" # ISO639-1 codes must be used / to be checked against Preferred Language(hs_language) Contact prop too if HS forms are used
-      name: "English"
-    - lang: "sq"
+    - lang: "sq" # ISO639-1 codes must be used / to be checked against Preferred Language(hs_language) Contact prop too if HS forms are used
       name: "Shqip"
     - lang: "sr"
       name: "Srpski"
-  siteLanguage: 1
+    - lang: "en"
+      name: "English"
+  siteLanguage: 0
   fallbackLang: 0
   needsTranslation:
     - "body"
