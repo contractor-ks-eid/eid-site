@@ -11,16 +11,6 @@
 
     hooks.addAction('customiseTheme', (functionName, result, args) => { 
         console.log(`init hook after: ${functionName} on {{page.permalink}}`);
-        nrLog(
-            'loading page', 
-            `executed ${functionName}`, 
-            'info', 
-            {
-                functionName: functionName,
-                result: result,
-                args: args
-            }
-        );
     }, 0, 'init');
     
 </script>
