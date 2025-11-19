@@ -1,1 +1,0 @@
-This is a card with aside content made of three Docaroo components: `external content`, `image gallery` and `link buttons group`.

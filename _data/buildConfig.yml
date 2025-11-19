@@ -88,18 +88,18 @@ siteFooter:
         Copyright <i class="bi bi-c-circle"></i> 
         <a href="https://pmc-expert.com" target=_blank>PMC</a>
 googleAnalytics:
-  enabled: true #enable/disable GA integration
-  ga: "G-T86D5YQ5WF"
+  enabled: false #enable/disable GA integration
+  ga: ""
 googleTagManager:
-  enabled: true #enable/disable GTM integration
-  gtm: "GTM-KCLM93S"
+  enabled: false #enable/disable GTM integration
+  gtm: ""
 breadcrumbs:
   depth: 100
 hubspot:
-  portalID: "7598952"
-  region: "na1"
+  portalID: ""
+  region: ""
   feedbackFormID: 
-    ID: "e166804c-61ea-4b51-801d-f4299cb5c06c"
+    ID: ""
 faq:
   enabled: true #enable/disable FAQ feature
   pagination: true
@@ -124,6 +124,6 @@ elements:
     word_sum_model: "facebook/bart-large-cnn"
     pdf_sum_model: "facebook/bart-large-cnn"
 cloudflare:
-  enabled: true
-  workerBase: https://docaroo-scripts.innohub-space.workers.dev/cdn-proxy/
+  enabled: false
+  workerBase: ""
 spellCheck: true
