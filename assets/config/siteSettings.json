@@ -1228,12 +1228,12 @@
       "createTimeUTC": 1759673895,
       "relatedPages": [
         {
-          "title": "Deploy",
-          "permalink": "/go-live/deploy/"
-        },
-        {
           "title": "GitHub",
           "permalink": "/integrations/github/"
+        },
+        {
+          "title": "Deploy",
+          "permalink": "/go-live/deploy/"
         },
         {
           "title": "Config Options",
@@ -1310,14 +1310,6 @@
         {
           "permalink": "/go-live/deploy/",
           "title": "Deploy"
-        },
-        {
-          "permalink": "/go-live/build/",
-          "title": "Build and test"
-        },
-        {
-          "permalink": "/integrations/algolia/",
-          "title": "Algolia"
         }
       ],
       "readingTime": 3,
@@ -1397,16 +1389,8 @@
       "autoSummary": "Building and testing the site means go generate the site, running the automatic testing and the spell checking. Following the site build and tests results, corrections may be needed. When everything is fine, is time to serve the site locally and test its appearance and functionality.",
       "similarByContent": [
         {
-          "permalink": "/go-live/",
-          "title": "Go live"
-        },
-        {
           "permalink": "/get-started/",
           "title": "Get started"
-        },
-        {
-          "permalink": "/go-live/deploy/",
-          "title": "Deploy"
         }
       ],
       "readingTime": 6,
@@ -1427,10 +1411,10 @@
         "deploy"
       ],
       "excerpt": "deploying, hosting, netlify, github, configuring, process, env, build, update, docaroo",
-      "lastUpdate": "2025-10-30 16:56:08 +0200",
+      "lastUpdate": "2025-11-10 20:30:42 +0200",
       "lastUpdateUTC": 0,
-      "createTime": "2025-10-30 16:56:08 +0200",
-      "createTimeUTC": 1761836168,
+      "createTime": "2025-11-10 20:30:42 +0200",
+      "createTimeUTC": 1762799442,
       "relatedPages": [
         {
           "title": "Build and test",
@@ -1454,17 +1438,9 @@
         {
           "permalink": "/integrations/github/",
           "title": "GitHub"
-        },
-        {
-          "permalink": "/integrations/algolia/",
-          "title": "Algolia"
-        },
-        {
-          "permalink": "/go-live/build/",
-          "title": "Build and test"
         }
       ],
-      "readingTime": 4,
+      "readingTime": 5,
       "hasDynamicContent": false,
       "parent": "Go live"
     },
@@ -1547,10 +1523,6 @@
       ],
       "autoSummary": "Docaroo provides out-of-the-box full integration with algolia docsearch. The search experience has multilanguage support by default.",
       "similarByContent": [
-        {
-          "permalink": "/go-live/deploy/",
-          "title": "Deploy"
-        },
         {
           "permalink": "/get-started/",
           "title": "Get started"
@@ -1642,10 +1614,6 @@
         {
           "permalink": "/go-live/deploy/",
           "title": "Deploy"
-        },
-        {
-          "permalink": "/content/ec/",
-          "title": "External content"
         }
       ],
       "readingTime": 2,
@@ -1828,6 +1796,43 @@
       "parent": ""
     },
     {
+      "title": "Maintain",
+      "permalink": "/maintain/",
+      "categories": [
+        "Start",
+        "Go live"
+      ],
+      "tags": [
+        "docs",
+        "documents",
+        "maintain"
+      ],
+      "excerpt": "documentation, iawriter, markdown, maintaining, repository, editor, zettlr, tags, update, site",
+      "lastUpdate": "2025-11-10 20:30:42 +0200",
+      "lastUpdateUTC": 0,
+      "createTime": "2025-11-10 20:30:42 +0200",
+      "createTimeUTC": 1762799442,
+      "relatedPages": [
+        {
+          "title": "Docs root",
+          "permalink": "/get-started/doc-contents/"
+        },
+        {
+          "title": "Get started",
+          "permalink": "/get-started/"
+        },
+        {
+          "title": "Introduction",
+          "permalink": "/intro/"
+        }
+      ],
+      "autoSummary": "Maintaining the documentation is about keeping the content up-to-date, removing obsolete content or adding new content. Updating content can be related to refreshing the associated taxonomies (site tags, site categories).",
+      "similarByContent": [],
+      "readingTime": 3,
+      "hasDynamicContent": false,
+      "parent": ""
+    },
+    {
       "title": "Config Files",
       "permalink": "/get-started/config-files/",
       "categories": [
@@ -1940,6 +1945,7 @@
     "deploy",
     "docs",
     "documentation",
+    "documents",
     "docx",
     "download",
     "embed",
@@ -1964,6 +1970,7 @@
     "log",
     "lottie",
     "low-code",
+    "maintain",
     "measure",
     "monitor",
     "new relic",
@@ -2075,7 +2082,7 @@
         {
           "title": "Deploy",
           "permalink": "/go-live/deploy/",
-          "lastUpdate": "30-Oct-2025"
+          "lastUpdate": "10-Nov-2025"
         },
         {
           "title": "Go live",
@@ -2100,7 +2107,7 @@
         {
           "title": "Deploy",
           "permalink": "/go-live/deploy/",
-          "lastUpdate": "30-Oct-2025"
+          "lastUpdate": "10-Nov-2025"
         },
         {
           "title": "Go live",
@@ -2330,7 +2337,7 @@
         {
           "title": "Deploy",
           "permalink": "/go-live/deploy/",
-          "lastUpdate": "30-Oct-2025"
+          "lastUpdate": "10-Nov-2025"
         },
         {
           "title": "Go live",
@@ -2358,6 +2365,11 @@
           "lastUpdate": "08-Nov-2025"
         },
         {
+          "title": "Maintain",
+          "permalink": "/maintain/",
+          "lastUpdate": "10-Nov-2025"
+        },
+        {
           "title": "Config Files",
           "permalink": "/get-started/config-files/",
           "lastUpdate": "27-Oct-2025"
@@ -2368,7 +2380,7 @@
           "lastUpdate": "30-Oct-2025"
         }
       ],
-      "numPages": 5
+      "numPages": 6
     },
     "documentation": {
       "pages": [
@@ -2404,6 +2416,16 @@
         }
       ],
       "numPages": 6
+    },
+    "documents": {
+      "pages": [
+        {
+          "title": "Maintain",
+          "permalink": "/maintain/",
+          "lastUpdate": "10-Nov-2025"
+        }
+      ],
+      "numPages": 1
     },
     "docx": {
       "pages": [
@@ -2725,6 +2747,16 @@
       ],
       "numPages": 3
     },
+    "maintain": {
+      "pages": [
+        {
+          "title": "Maintain",
+          "permalink": "/maintain/",
+          "lastUpdate": "10-Nov-2025"
+        }
+      ],
+      "numPages": 1
+    },
     "measure": {
       "pages": [
         {
@@ -3040,7 +3072,7 @@
         {
           "title": "Deploy",
           "permalink": "/go-live/deploy/",
-          "lastUpdate": "30-Oct-2025"
+          "lastUpdate": "10-Nov-2025"
         },
         {
           "title": "Go live",
@@ -3315,15 +3347,20 @@
         {
           "title": "Deploy",
           "permalink": "/go-live/deploy/",
-          "lastUpdate": "30-Oct-2025"
+          "lastUpdate": "10-Nov-2025"
         },
         {
           "title": "Go live",
           "permalink": "/go-live/",
           "lastUpdate": "28-Oct-2025"
+        },
+        {
+          "title": "Maintain",
+          "permalink": "/maintain/",
+          "lastUpdate": "10-Nov-2025"
         }
       ],
-      "numPages": 4
+      "numPages": 5
     },
     "Integrations": {
       "pages": [
@@ -3405,7 +3442,7 @@
         {
           "title": "Deploy",
           "permalink": "/go-live/deploy/",
-          "lastUpdate": "30-Oct-2025"
+          "lastUpdate": "10-Nov-2025"
         },
         {
           "title": "Go live",
@@ -3443,6 +3480,11 @@
           "lastUpdate": "28-Oct-2025"
         },
         {
+          "title": "Maintain",
+          "permalink": "/maintain/",
+          "lastUpdate": "10-Nov-2025"
+        },
+        {
           "title": "Config Files",
           "permalink": "/get-started/config-files/",
           "lastUpdate": "27-Oct-2025"
@@ -3453,7 +3495,7 @@
           "lastUpdate": "30-Oct-2025"
         }
       ],
-      "numPages": 15
+      "numPages": 16
     },
     "Taxonomies": {
       "pages": [

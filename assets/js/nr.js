@@ -3,7 +3,7 @@
 const nrLog = (logMessage, logAction, logLevel = null, funcData) => {
     if (nrSettings.newRelicEnabled === 'true') {
         if (!logLevel) logLevel = 'info';
-        
+                
         logCustomAttributes = {
             source: settings.siteTitle,
             permalink: $('page-data-permalink').text() ? $('page-data-permalink').text() : '/',

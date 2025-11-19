@@ -176,3 +176,8 @@ permalinks
 iso
 cloudflare
 ghp
+zettlr
+txt
+iawriter
+ios
+vpn

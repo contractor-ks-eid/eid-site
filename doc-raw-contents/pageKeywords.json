@@ -599,6 +599,21 @@
         "sections",
         "mode"
       ]
+    },
+    {
+      "permalink": "/maintain/",
+      "keywords": [
+        "documentation",
+        "iawriter",
+        "markdown",
+        "maintaining",
+        "repository",
+        "editor",
+        "zettlr",
+        "tags",
+        "update",
+        "site"
+      ]
     }
   ]
 }

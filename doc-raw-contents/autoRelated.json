@@ -407,12 +407,12 @@
     "permalink": "/get-started/env/",
     "related": [
       {
-        "title": "Deploy",
-        "permalink": "/go-live/deploy/"
-      },
-      {
         "title": "GitHub",
         "permalink": "/integrations/github/"
+      },
+      {
+        "title": "Deploy",
+        "permalink": "/go-live/deploy/"
       },
       {
         "title": "Config Options",
@@ -630,6 +630,23 @@
       {
         "title": "Config Files",
         "permalink": "/get-started/config-files/"
+      }
+    ]
+  },
+  {
+    "permalink": "/maintain/",
+    "related": [
+      {
+        "title": "Docs root",
+        "permalink": "/get-started/doc-contents/"
+      },
+      {
+        "title": "Get started",
+        "permalink": "/get-started/"
+      },
+      {
+        "title": "Introduction",
+        "permalink": "/intro/"
       }
     ]
   },
