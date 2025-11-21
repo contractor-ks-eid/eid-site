@@ -122,7 +122,7 @@
         },
         "submisionSource": {
           "propName": "source",
-          "propValue": "docaroo"
+          "propValue": "eid_docs"
         },
         "prefLang": {
           "propName": "hs_language"
@@ -137,8 +137,8 @@
       "fontFamily": "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
     },
     "links": {
-      "privacyLink": "https://innohub.space/eng/privacy",
-      "supportLink": "https://innohub.space/eng/mypmc/technical-support/"
+      "privacyLink": "https://ks-eid.com/privacy",
+      "supportLink": "https://ks-eid.com/support"
     },
     "selectedTextContextMenu": {
       "enabled": true,
@@ -172,16 +172,16 @@
       },
       "availableLang": [
         {
-          "lang": "en",
-          "name": "English"
-        },
-        {
           "lang": "sq",
           "name": "Shqip"
         },
         {
           "lang": "sr",
-          "name": "Serbian"
+          "name": "Srpski"
+        },
+        {
+          "lang": "en",
+          "name": "English"
         }
       ],
       "siteLanguage": 0,
@@ -225,10 +225,10 @@
         "docs"
       ],
       "excerpt": "pagebuildconfig, documentation, configuration, page, document, configured, header, section, yml, entry",
-      "lastUpdate": "2025-11-19 19:10:03 +0200",
+      "lastUpdate": "2025-11-20 11:55:36 +0200",
       "lastUpdateUTC": 0,
-      "createTime": "2025-11-19 19:10:03 +0200",
-      "createTimeUTC": 1763572203,
+      "createTime": "2025-11-20 11:55:36 +0200",
+      "createTimeUTC": 1763632536,
       "relatedPages": [],
       "autoSummary": "This document can be configured to appear in the home page, header section as the entry point to the documentation. The configuration shall be made in: _datapagebuildconfig.yml, section, key and is used in as _datAPagebuild configuration.",
       "similarByContent": [],
@@ -247,7 +247,7 @@
         {
           "title": "Introduction",
           "permalink": "/intro/",
-          "lastUpdate": "19-Nov-2025"
+          "lastUpdate": "20-Nov-2025"
         }
       ],
       "numPages": 1
@@ -257,7 +257,7 @@
         {
           "title": "Introduction",
           "permalink": "/intro/",
-          "lastUpdate": "19-Nov-2025"
+          "lastUpdate": "20-Nov-2025"
         }
       ],
       "numPages": 1
@@ -272,14 +272,29 @@
         {
           "title": "Introduction",
           "permalink": "/intro/",
-          "lastUpdate": "19-Nov-2025"
+          "lastUpdate": "20-Nov-2025"
         }
       ],
       "numPages": 1
     }
   },
   "hsSettings": {},
-  "algoliaSettings": {},
+  "algoliaSettings": {
+    "algoliaEnabled": true,
+    "algoliaAppID": "R9K37K90J0",
+    "algoliaIndex": "docs-ks-eid-crawler",
+    "algoliaPublicApiKey": "fa4ff6cff8d08381d80cf287ede9840e",
+    "algoliaSearchBoxContainer": "#docsearch",
+    "algoliaDebug": false,
+    "algoliaMaxResultsPerGroup": 20,
+    "algoliaHitsPerPage": 10,
+    "algoliaSendInsights": true,
+    "algoliaTextHighlightPrefixTag": "<mark>",
+    "algoliaTextHighlightPostfixTag": "</mark>",
+    "algoliaRaiseIssueLink": "https://github.com/contractor-ks-eid/eid-doc-site/issues/new?title=",
+    "algoliaDocSearchEnabled": true,
+    "algoliaCustomEnabled": false
+  },
   "pageSettings": {
     "/": {
       "sections": {
@@ -292,12 +307,12 @@
   },
   "gData": {
     "ga": {
-      "enabled": false,
-      "ga": ""
+      "enabled": true,
+      "ga": "G-S12CV9TTQG"
     },
     "gtm": {
-      "enabled": false,
-      "gtm": ""
+      "enabled": true,
+      "gtm": "GTM-NWK7XCJQ"
     }
   },
   "newRelicSettings": {

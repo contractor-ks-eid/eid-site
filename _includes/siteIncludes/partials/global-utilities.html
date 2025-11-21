@@ -138,17 +138,19 @@
         */
         const originalConsoleError = console.error;
         console.error = function(...args) {
-            nrLog(
-                'error', 
-                'console.error', 
-                'error', 
-                {
-                    functionName: 'console.error',
-                    result: '',
-                    args: args, 
-                    argsExtra: '', 
-                }
-            );
+            if (allSettings.newRelicSettings.newRelicEnabled === 'true') {
+                nrLog(
+                    'error', 
+                    'console.error', 
+                    'error', 
+                    {
+                        functionName: 'console.error',
+                        result: '',
+                        args: args, 
+                        argsExtra: '', 
+                    }
+                );
+            }
             originalConsoleError.apply(console, args);
         };
 
@@ -158,53 +160,59 @@
                 const response = await originalFetch(...args);
 
                 if (response.status === 401 || response.status === 403) {
-                    nrLog(
-                        'error',
-                        'fetch 401/403 error',
-                        'error',
-                        {
-                            functionName: 'fetch',
-                            result: '',
-                            args: args, 
-                            argsExtra: {
-                                status: response.status,
-                                statusText: response.statusText,
-                                url: args[0]
+                    if (allSettings.newRelicSettings.newRelicEnabled === 'true') {
+                        nrLog(
+                            'error',
+                            'fetch 401/403 error',
+                            'error',
+                            {
+                                functionName: 'fetch',
+                                result: '',
+                                args: args, 
+                                argsExtra: {
+                                    status: response.status,
+                                    statusText: response.statusText,
+                                    url: args[0]
+                                }
                             }
-                        }
-                    );
+                        );
+                    }
                 } else if (response.status >= 400 && response.status < 500) {
+                    if (allSettings.newRelicSettings.newRelicEnabled === 'true') {
+                        nrLog(
+                            'error',
+                            'fetch error',
+                            'error',
+                            {
+                                functionName: 'fetch',
+                                result: '',
+                                args: args, 
+                                argsExtra: {
+                                    status: response.status,
+                                    statusText: response.statusText,
+                                    url: args[0]
+                                }
+                            }
+                        );
+                    }
+                }
+                return response; 
+            } catch (error) {
+                if (allSettings.newRelicSettings.newRelicEnabled === 'true') {
                     nrLog(
                         'error',
-                        'fetch error',
+                        'fetch failure',
                         'error',
                         {
                             functionName: 'fetch',
                             result: '',
-                            args: args, 
+                            args: args,
                             argsExtra: {
-                                status: response.status,
-                                statusText: response.statusText,
-                                url: args[0]
+                                error: error.message,
                             }
                         }
                     );
                 }
-                return response; 
-            } catch (error) {
-                nrLog(
-                    'error',
-                    'fetch failure',
-                    'error',
-                    {
-                        functionName: 'fetch',
-                        result: '',
-                        args: args,
-                        argsExtra: {
-                            error: error.message,
-                        }
-                    }
-                );
                 throw error; 
             }
         };
@@ -227,35 +235,39 @@
         XMLHttpRequest.prototype.send = function(...args) {
             this.addEventListener("readystatechange", function() {
                 if (this.readyState === 4 && (this.status === 401 || this.status === 403)) {
-                    nrLog(
-                        'error',
-                        'xhr 401/403 error',
-                        'error',
-                        {
-                            functionName: 'XMLHttpRequest',
-                            result: '',
-                            args: [this._xhrMethod, this._xhrUrl],
-                            argsExtra: {
-                                status: this.status,
-                                statusText: this.statusText
+                     if (allSettings.newRelicSettings.newRelicEnabled === 'true') {
+                        nrLog(
+                            'error',
+                            'xhr 401/403 error',
+                            'error',
+                            {
+                                functionName: 'XMLHttpRequest',
+                                result: '',
+                                args: [this._xhrMethod, this._xhrUrl],
+                                argsExtra: {
+                                    status: this.status,
+                                    statusText: this.statusText
+                                }
                             }
-                        }
-                    );
+                        );
+                    }
                 } else if (this.readyState === 4 && this.status >= 400 && this.status < 500) {
-                    nrLog(
-                        'error',
-                        'xhr error',
-                        'error',
-                        {
-                            functionName: 'XMLHttpRequest',
-                            result: '',
-                            args: [this._xhrMethod, this._xhrUrl],
-                            argsExtra: {
-                                status: this.status,
-                                statusText: this.statusText
+                    if (allSettings.newRelicSettings.newRelicEnabled === 'true') {
+                        nrLog(
+                            'error',
+                            'xhr error',
+                            'error',
+                            {
+                                functionName: 'XMLHttpRequest',
+                                result: '',
+                                args: [this._xhrMethod, this._xhrUrl],
+                                argsExtra: {
+                                    status: this.status,
+                                    statusText: this.statusText
+                                }
                             }
-                        }
-                    );
+                        );
+                    }
                 }
             });
 
@@ -271,74 +283,82 @@
 
                 options.success = function(data, textStatus, jqXHR) {
                     if (jqXHR.status === 401 || jqXHR.status === 403) {
-                        nrLog(
-                            'error',
-                            'ajax success 401/403 error',
-                            'error',
-                            {
-                                functionName: 'jQuery.ajax',
-                                result: '',
-                                args: args, 
-                                argsExtra: {
-                                    status: jqXHR.status,
-                                    statusText: jqXHR.statusText,
-                                    url: options.url
+                        if (allSettings.newRelicSettings.newRelicEnabled === 'true') {
+                            nrLog(
+                                'error',
+                                'ajax success 401/403 error',
+                                'error',
+                                {
+                                    functionName: 'jQuery.ajax',
+                                    result: '',
+                                    args: args, 
+                                    argsExtra: {
+                                        status: jqXHR.status,
+                                        statusText: jqXHR.statusText,
+                                        url: options.url
+                                    }
                                 }
-                            }
-                        );
+                            );
+                        }
                     } else if (jqXHR.status >= 400 && jqXHR.status < 500) {
-                        nrLog(
-                            'error',
-                            'ajax success 4XX error',
-                            'error',
-                            {
-                                functionName: 'jQuery.ajax',
-                                result: '',
-                                args: args, 
-                                argsExtra: {
-                                    status: jqXHR.status,
-                                    statusText: jqXHR.statusText,
-                                    url: options.url
+                        if (allSettings.newRelicSettings.newRelicEnabled === 'true') {
+                            nrLog(
+                                'error',
+                                'ajax success 4XX error',
+                                'error',
+                                {
+                                    functionName: 'jQuery.ajax',
+                                    result: '',
+                                    args: args, 
+                                    argsExtra: {
+                                        status: jqXHR.status,
+                                        statusText: jqXHR.statusText,
+                                        url: options.url
+                                    }
                                 }
-                            }
-                        );
+                            );
+                        }
                     }
                     if (successHandler) successHandler.apply(this, arguments);
                 };
 
                 options.error = function(jqXHR, textStatus, errorThrown) {
                     if (jqXHR.status === 401 || jqXHR.status === 403) {
-                        nrLog(
-                            'error',
-                            'ajax error 401/403 error',
-                            'error',
-                            {
-                                functionName: 'jQuery.ajax',
-                                result: '',
-                                args: args,
-                                argsExtra: {
-                                    status: jqXHR.status,
-                                    statusText: jqXHR.statusText,
-                                    url: options.url
+                        if (allSettings.newRelicSettings.newRelicEnabled === 'true') {
+                            nrLog(
+                                'error',
+                                'ajax error 401/403 error',
+                                'error',
+                                {
+                                    functionName: 'jQuery.ajax',
+                                    result: '',
+                                    args: args,
+                                    argsExtra: {
+                                        status: jqXHR.status,
+                                        statusText: jqXHR.statusText,
+                                        url: options.url
+                                    }
                                 }
-                            }
-                        );
+                            );
+                        }
                     } else if (jqXHR.status >= 400 && jqXHR.status < 500) {
-                        nrLog(
-                            'error',
-                            'ajax error 4XX error',
-                            'error',
-                            {
-                                functionName: 'jQuery.ajax',
-                                result: '',
-                                args: args,
-                                argsExtra: {
-                                    status: jqXHR.status,
-                                    statusText: jqXHR.statusText,
-                                    url: options.url
+                        if (allSettings.newRelicSettings.newRelicEnabled === 'true') {
+                            nrLog(
+                                'error',
+                                'ajax error 4XX error',
+                                'error',
+                                {
+                                    functionName: 'jQuery.ajax',
+                                    result: '',
+                                    args: args,
+                                    argsExtra: {
+                                        status: jqXHR.status,
+                                        statusText: jqXHR.statusText,
+                                        url: options.url
+                                    }
                                 }
-                            }
-                        );
+                            );
+                        }
                     }
                     if (errorHandler) errorHandler.apply(this, arguments);
                 };

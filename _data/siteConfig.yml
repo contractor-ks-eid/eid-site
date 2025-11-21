@@ -94,7 +94,7 @@ hsIntegration:
       submittedMessage: ".submitted-message"
     submisionSource: 
       propName: "source"
-      propValue: "docaroo"
+      propValue: "eid_docs"
     prefLang:
       propName: "hs_language"
     userToken:
@@ -103,8 +103,8 @@ scripts:
   jQuery: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
   fontFamily: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
 links:
-  privacyLink: "https://innohub.space/eng/privacy"
-  supportLink: "https://innohub.space/eng/mypmc/technical-support/"
+  privacyLink: "https://ks-eid.com/privacy"
+  supportLink: "https://ks-eid.com/support"
 selectedTextContextMenu:
   enabled: true  # enable/disable context menu feature on desktop for page content. better to be disabled if Algolia is not used
   minWords: 1
@@ -130,12 +130,12 @@ multilang:
     i18JQuery: "https://cdn.jsdelivr.net/npm/jquery-i18next@1.2.1/jquery-i18next.min.js"
     i18Sprintf: "https://cdn.jsdelivr.net/npm/i18next-sprintf-postprocessor@0.2.2/dist/umd/i18nextSprintfPostProcessor.min.js"
   availableLang: 
-    - lang: "en" # ISO639-1 codes must be used / to be checked against Preferred Language(hs_language) Contact prop too if HS forms are used
-      name: "English"
-    - lang: "sq"
+    - lang: "sq" # ISO639-1 codes must be used / to be checked against Preferred Language(hs_language) Contact prop too if HS forms are used
       name: "Shqip"
     - lang: "sr"
-      name: "Serbian"
+      name: "Srpski"
+    - lang: "en"
+      name: "English"
   siteLanguage: 0
   fallbackLang: 0
   needsTranslation:
