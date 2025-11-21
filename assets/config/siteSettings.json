@@ -291,7 +291,7 @@
     "algoliaSendInsights": true,
     "algoliaTextHighlightPrefixTag": "<mark>",
     "algoliaTextHighlightPostfixTag": "</mark>",
-    "algoliaRaiseIssueLink": "https://github.com/pmc-community/jekyll-site-template/issues/new?title=",
+    "algoliaRaiseIssueLink": "https://github.com/contractor-ks-eid/eid-doc-site/issues/new?title=",
     "algoliaDocSearchEnabled": true,
     "algoliaCustomEnabled": false
   },
