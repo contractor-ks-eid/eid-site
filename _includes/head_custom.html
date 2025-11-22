@@ -49,6 +49,7 @@
     body {visibility: hidden}
 </style>
 
+<!-- New Relic if applicable -->
 {% assign nr = site.data.new_relic_integration | json_string_to_object %}
 {% if nr.newRelicEnabled %}
     <script defer type="application/javascript">
@@ -58,10 +59,9 @@
     }
     </script>
     <script async type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-{% endif %}
 
-<!-- New Relic if applicable -->
-{% include siteIncludes/partials/new-relic.html %}
+    {% include siteIncludes/partials/new-relic.html %}
+{% endif %}
 
 <!-- preconnect some things to speed up loading -->
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
