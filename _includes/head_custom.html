@@ -494,14 +494,14 @@
 {% if site.data.siteConfig.hsIntegration.enabled %}
     <script data-cookieconsent="marketing">
         window.loadYouTubeApi = function() {
-            var tag = document.createElement('script');
+            const tag = document.createElement('script');
             tag.src = "https://www.youtube.com/iframe_api";
             document.head.appendChild(tag);
         };
     </script>
 
     <script>    
-        var _hsp = window._hsp = window._hsp || [];
+        _hsp = window._hsp = window._hsp || [];
         _hsp.push([
             "addPrivacyConsentListener",
             function (consent) {
