@@ -489,7 +489,11 @@
 {% include siteIncludes/partials/gtm-head.html %}
 
 <!-- YouTube API -->
-{% comment %} Needed to control the YouTube player with API {% endcomment %}
+{% comment %} 
+    Needed to control the YouTube player with API
+    When cookie banner is from HS, it is loaded after consent, otherwise is setting some cookies.
+    On dev and without HS cookie banner, it is loaded by default, setting also the cookies 
+{% endcomment %}
 
 {% if site.data.siteConfig.hsIntegration.enabled %}
     <script data-cookieconsent="marketing">
